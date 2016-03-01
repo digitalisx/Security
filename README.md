@@ -11,23 +11,16 @@
 <hr></hr>
 
 ##Ongoing Research & Projects
-* Windows MBR 분석 - MBR 분석을 통한 자동화 도구 제작 및 악성코드 분석 
-
-##Complete Research & Projects
 * 비공개
 
-##Update Note (2016.02.19)
-####Main
-* MBR 카테고리가 신설 되었습니다.
+##Complete Research & Projects
+* Windows MBR 분석 - MBR 분석을 통한 자동화 도구 제작 및 악성코드 분석 
+* 비공개
 
-* README.md 파일이 새롭게 작성 되었습니다.
+##Update Note (2016.03.01)
 
 ####MBR
-* 진행중인 연구에 사용될 예제 파일들 6종이 업로드 되었습니다.
-
-* MBR 분석 자동화 도구(mbr-analyzer.py) 의 코드가 업로드 되었습니다.
-
-* 각종 예제와 자동화 도구에서 사용될 MBR 덤프 파일이 업로드 되었습니다.
+*Window MBR 분석.PDF 파일이 업로드 되었습니다.
 
 <hr></hr>
 
