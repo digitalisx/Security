@@ -14,7 +14,8 @@
 * 비공개
 
 ##Complete Research & Projects
-* Windows MBR 분석 - MBR 분석을 통한 자동화 도구 제작 및 악성코드 분석 
+* Windows MBR 분석 - MBR 분석을 통한 자동화 도구 제작 및 악성코드 분석
+
 * 비공개
 
 ##Update Note (2016.03.01)
