@@ -11,14 +11,20 @@
 <hr></hr>
 
 ##Ongoing Research & Projects
-* 비공개
+* Volatility Plugin - Malcom
 
 ##Complete Research & Projects
 * Windows MBR 분석 - MBR 분석을 통한 자동화 도구 제작 및 악성코드 분석
 
+* Bypass Online CAPTCHA
+
+* MRU Viewer with Python
+
+* Steam Artifact
+
 * 비공개
 
-##Update Note (2016.03.01)
+##Update Note
 
 ####MBR
 *Window MBR 분석.PDF 파일이 업로드 되었습니다.
