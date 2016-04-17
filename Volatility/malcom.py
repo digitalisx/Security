@@ -2,7 +2,7 @@
 #
 # Copyright (C) 2015 Digitalis (https://www.facebook.com/digitalisx) 
 #
-# Thanks to	MaJ3stY (saiwnsgud@naver.com)
+# Thanks to	MaJ3stY (saiwnsgud@naver.com), n0fate (rapfer@gmail.com)
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
