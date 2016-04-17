@@ -2,7 +2,7 @@
 #
 # Copyright (C) 2015 Digitalis (https://www.facebook.com/digitalisx) 
 #
-# Thanks to	MaJ3stY (saiwnsgud@naver.com), n0fate (rapfer@gmail.com)
+# Thanks to MaJ3stY (saiwnsgud@naver.com), n0fate (rapfer@gmail.com)
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -26,7 +26,7 @@ import volatility.utils as utils
 import volatility.commands as commands
 import volatility.plugins.procdump as ProcDump
 
-malcom_key = "6C2D657C914FA208C0ABB6E1B2A7DB4F3BC0A118AD93B4349362E884158FBF5A"
+malcom_key = "---Your Malwares.com API Key---"
 
 print "\n[!] Malcom (Volatility Malwares.com Plugin)\n"
 
