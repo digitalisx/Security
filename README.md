@@ -16,12 +16,15 @@
 ##Complete Research & Projects
 * Windows MBR 분석 - MBR 분석을 통한 자동화 도구 제작 및 악성코드 분석
 
-* 비공개
+* Steamworks Artifact
 
-##Update Note (2016.03.01)
+* Volatility Plugin - Malcom (Virust Scan & Upload)
 
-####MBR
-*Window MBR 분석.PDF 파일이 업로드 되었습니다.
+* Microsoft Office MRU Viewer (Python)
+
+* HWP MRU Viewer (Python)
+
+* Google Chrome History Viewer (Python)
 
 <hr></hr>
 
