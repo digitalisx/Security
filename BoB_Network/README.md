@@ -20,7 +20,9 @@ BoB 네트워크 수업 자료 및 과제들을 업로드 하는 공간입니다
 
 ##pcap_hw.c 스크린 샷
 
-![스크린샷 1]()
+![스크린샷 1](https://github.com/Digitalisx/Forensic/blob/master/BoB_Network/ETC/pcap_hw%20Screenshot%201.PNG)
+
+![스크린샷 2](https://github.com/Digitalisx/Forensic/blob/master/BoB_Network/ETC/pcap_hw%20Screenshot%202.PNG)
 
 <hr></hr>
 
