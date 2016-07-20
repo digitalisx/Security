@@ -19,6 +19,24 @@ def csv_make(): # .csv 파일을 만들고 읽어들일 함수 선언
     
     print "[!] Make CSV File !" # 파일 생성 시, 알림 메시지 출력
 
+def csv_write(): # 생성된 csv 파일에 기록하는 함수 선언
+
+    global file_csv # 전역 변수 file_csv 사용
+
+    file_csv.write("File Extensions" + ", " + "Total Size (Byte)" + ", " + "Count" + "\n") # csv 파일 첫 줄에 분류를 위한 표 작성
+
+    for cov_file_type in file_dict.keys(): # 딕셔너리 키 값들을 cov_file_type에 대입 반복
+
+        if cov_file_type == "": # cov_file_type 값이 존재하지 않는다면 / 확장자가 존재 하지 않는 파일을 분류
+        
+            file_csv.write("None Extension Files" + ", " + str(file_dict[cov_file_type][0]) + ", " + str(file_dict[cov_file_type][1]) + "\n") # 확장자가 없는 파일에 대하여 파일 크기 합과 개수 출력
+    
+        else: # 존재한다면
+
+            file_csv.write(cov_file_type + ", " + str(file_dict[cov_file_type][0]) + ", " + str(file_dict[cov_file_type][1]) + "\n") # 확장자 마다 분류하여 파일 크기 합과 개수 출력
+
+    print "[!] All Process is Finish, Thank you!" # 프로그램 종료 메시지 출력
+
 def main(drive_name): # 파일 정보를 추출 및 가공할 Main 함수 선언
     
     try: # 예외 처리 활용을 위한 try문 사용
@@ -52,24 +70,6 @@ def main(drive_name): # 파일 정보를 추출 및 가공할 Main 함수 선언
     except: # 예외 발생 시
         
         pass # 무시하고 통과
-
-def csv_write(): # 생성된 csv 파일에 기록하는 함수 선언
-
-    global file_csv # 전역 변수 file_csv 사용
-
-    file_csv.write("File Extensions" + ", " + "Total Size (Byte)" + ", " + "Count" + "\n") # csv 파일 첫 줄에 분류를 위한 표 작성
-
-    for cov_file_type in file_dict.keys(): # 딕셔너리 키 값들을 cov_file_type에 대입 반복
-
-        if cov_file_type == "": # cov_file_type 값이 존재하지 않는다면 / 확장자가 존재 하지 않는 파일을 분류
-        
-            file_csv.write("None Extension Files" + ", " + str(file_dict[cov_file_type][0]) + ", " + str(file_dict[cov_file_type][1]) + "\n") # 확장자가 없는 파일에 대하여 파일 크기 합과 개수 출력
-    
-        else: # 존재한다면
-
-            file_csv.write(cov_file_type + ", " + str(file_dict[cov_file_type][0]) + ", " + str(file_dict[cov_file_type][1]) + "\n") # 확장자 마다 분류하여 파일 크기 합과 개수 출력
-
-    print "[!] All Process is Finish, Thank you!" # 프로그램 종료 메시지 출력
 
 csv_make() # csv_make 함수 실행 
 
