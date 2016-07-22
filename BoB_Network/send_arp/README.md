@@ -8,21 +8,21 @@ BoB 네트워크 수업 자료 및 과제들을 업로드 하는 공간입니다
 
 <hr></hr>
 
-##pcap_hw.c 기본 정보
+##send_arp.py 기본 정보
 * 패킷 캡처를 통해 특정한 정보를 출력하는 프로그램입니다.
 
-##pcap_hw.c 주의 사항
-* 기본적으로 libpcap의 설치가 필요합니다.
+##send_arp.py 주의 사항
+* 기본적으로 scapy의 설치가 필요합니다.
 
-* 컴파일은 gcc -o pcap_hw pcap_hw.c -lpcap을 사용해주세요.
+* 인자 값으로 공격 대상의 IP 값을 넣어주세요.
 
-* 컴파일 시 root 계정으로 로그인이 필요합니다.
+* 실행 시 root 계정으로 로그인이 필요합니다.
 
-##pcap_hw.c 스크린샷
+##send_arp.py 스크린샷
 
-![스크린샷 1](https://github.com/Digitalisx/Forensic/blob/master/BoB_Network/ETC/pcap_hw%20Screenshot%201.PNG)
+![스크린샷 1](https://github.com/Digitalisx/Forensic/blob/master/BoB_Network/ETC/send_arp%20Screenshot%201.png)
 
-![스크린샷 2](https://github.com/Digitalisx/Forensic/blob/master/BoB_Network/ETC/pcap_hw%20Screenshot%202.PNG)
+![스크린샷 2](https://github.com/Digitalisx/Forensic/blob/master/BoB_Network/ETC/send_arp%20Screenshot%202.PNG)
 
 <hr></hr>
 
