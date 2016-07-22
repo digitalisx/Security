@@ -54,17 +54,21 @@ def main(drive_name): # 파일 정보를 추출 및 가공할 Main 함수 선언
             else: # 파일인 경우 실행
             
                 file_size = os.path.getsize(full_file_name) # 해당 경로의 파일 크기 값 저장     
+                
                 file_type = os.path.splitext(full_file_name)[-1].split(",")[0] # splitext로 파일 명에서 확장자 분리 및 오류 값 처리
+                
                 cov_file_type = file_type.lower() # 파일 확장자를 소문자로 처리 
             
                 if cov_file_type in file_dict: # 파일 확장자 Dictionary 안에 파일 확장자가 존재 시
                 
                     file_dict[cov_file_type][0] = file_dict[cov_file_type][0] + file_size # 파일 크기 값을 불러오는 대로 값을 Dictionary에 추가 시켜줌
+                    
                     file_dict[cov_file_type][1] = file_dict[cov_file_type][1] + 1 # 파일 개수 값을 불러오고 추가하는 대로 개수를 Dictionary에서 상승 시킴
                 
                 else: # 존재하지 않는다면
             
                     file_dict[cov_file_type] = [0,1] # Dictionary에 없는 새로운 확장자 등록
+                    
                     file_dict[cov_file_type][0] = file_size # Dictionary에 새로 등록된 확장자에 대해 파일 크기 값 대입
     
     except: # 예외 발생 시
