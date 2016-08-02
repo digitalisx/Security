@@ -3,13 +3,17 @@
 import os # OS 모듈 Import
 import os.path # OS.PATH 모듈 Import
 import csv # CSV 모듈 Import
+import magic # Magic Module Import
 
 file_type = [] # File 확장자 추출에 사용될 리스트 선언
 file_type_list = [] # File 확장자 수집할 리스트 선언
+file_magic_ext = []
+file_magic_result = []
 
 file_size = 0 # File 크기 변수
 
 file_dict = dict() # 확장자 별 정보를 저장할 Dictionary 선언
+file_dict_2 = dict()
 
 def csv_make(): # .csv 파일을 만들고 읽어들일 함수 선언
 
@@ -62,6 +66,8 @@ def main(drive_name): # 파일 정보를 추출 및 가공할 Main 함수 선언
                 if cov_file_type in file_dict: # 파일 확장자 Dictionary 안에 파일 확장자가 존재 시
                 
                     file_dict[cov_file_type][0] = file_dict[cov_file_type][0] + file_size # 파일 크기 값을 불러오는 대로 값을 Dictionary에 추가 시켜줌
+
+                    file_dict_2[
                     
                     file_dict[cov_file_type][1] = file_dict[cov_file_type][1] + 1 # 파일 개수 값을 불러오고 추가하는 대로 개수를 Dictionary에서 상승 시킴
                 
@@ -77,10 +83,10 @@ def main(drive_name): # 파일 정보를 추출 및 가공할 Main 함수 선언
 
 csv_make() # csv_make 함수 실행 
 
-destination_drive = raw_input("[!] Input Mounted Drive Path : ") # 분석을 원하는 마운트 된 드라이브 경로 입력
+dest
+maiination_drive = raw_input("[!] Input Mounted Drive Path : ") # 분석을 원하는 마운트 된 드라이브 경로 입력
 
 print "[!] Wait a minute, Please do not open CSV file" # CSV 파일을 열지말라는 경고 메시지 출력
-
-main(destination_drive) # 입력받은 드라이브 경로를 Main 함수에 대입 및 실행
+n(destination_drive) # 입력받은 드라이브 경로를 Main 함수에 대입 및 실행
 
 csv_write() # csv_write 함수 실행
