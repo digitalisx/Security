@@ -1,4 +1,4 @@
-﻿#KITRI - Best Of the Best Network Homework
+﻿#KITRI - Best Of the Best Parsing Homework
 BoB 파싱 및 카빙 과제를 업로드 하는 공간입니다.
 * 개인의 공부를 목적으로 연구가 되고 만들어지는 자료입니다.
 
