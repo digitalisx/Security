@@ -83,12 +83,12 @@ hangouts ? -> ! Link Share
 rktskdkawns@gmail.com
 
 
-4. ~�� �ؾ߰ڴٴ� ���
+4. ~을 해야겠다는 결심
 
--�ڴ�
--�Ѵ�
--�ҰŴ�
--�ھ�
+-겠다
+-한다
+-할거다
+-겠어
 
 UTF-8 Encode & Search -> Found 2
 
@@ -96,7 +96,7 @@ UTF-8 Encode & Search -> Found 2
 https://mothereff.in/utf-8
 
 
-[0,"�׷� ũ���������� �ؾ߰ڴ�",[0,0,0,0]
+[0,"그래 크리스마스때 해야겠다",[0,0,0,0]
 ]
 ]
 ,[]
