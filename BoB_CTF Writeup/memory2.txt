@@ -1,0 +1,110 @@
+0. Select Plan
+
+String Search & Memory Forensic Framework
+
+Memory Forensic Framework
+
+Select Volatility, Rekall, Redline
+
+Plugin use - Volatility,Rekall + Python
+
+Normal Analysis - Redline, Volatility Standalone
+
+
+
+1. Imageinfo
+
+> C:\Users\digit\Desktop\volatility-2.5.standalone.exe -f C:\Users\digit\Desktop\memory2 imageinfo
+
+Volatility Foundation Volatility Framework 2.5
+INFO    : volatility.debug    : Determining profile based on KDBG search...
+          Suggested Profile(s) : Win10x86, Win81U1x86, Win8SP1x86, Win8SP0x86
+                     AS Layer1 : IA32PagedMemoryPae (Kernel AS)
+                     AS Layer2 : FileAddressSpace (C:\Users\digit\Desktop\memory2)
+                      PAE type : PAE
+                           DTB : 0x1a8000L
+                          KDBG : 0x8223b820L
+          Number of Processors : 4
+     Image Type (Service Pack) : 0
+                KPCR for CPU 0 : 0x82265000L
+                KPCR for CPU 1 : 0x87280000L
+                KPCR for CPU 2 : 0x872cb000L
+                KPCR for CPU 3 : 0x85614000L
+             KUSER_SHARED_DATA : 0xffdf0000L
+           Image date and time : 2015-08-19 17:20:06 UTC+0000
+     Image local date and time : 2015-08-20 02:20:06 +0900
+
+
+Image Profile is "Win10x86"
+
+
+2. Process List (pslist, psscan)
+
+> C:\Users\digit\Desktop\volatility-2.5.standalone.exe -f C:\Users\digit\Desktop\memory2 --profile=Win10x86 psscan
+
+0x00000000a7157040 sihost.exe         3808   1248 0x3fff31c0 2015-08-19 16:55:42 UTC+0000                               
+0x00000000a7180040 taskhostw.exe      1688   1248 0x3fff3440 2015-08-19 16:55:42 UTC+0000                               
+0x00000000a71ba7c0 FlashUtil_Acti     7180    672 0x3fff32a0 2015-08-19 17:09:56 UTC+0000                               
+0x00000000a71d3c40 MicrosoftEdgeC     6848    940 0x3fff3620 2015-08-19 17:13:48 UTC+0000                               
+0x00000000a71f9b00 explorer.exe       2768   4024 0x3fff3500 2015-08-19 16:55:42 UTC+0000                               
+0x00000000aa0bf040 browser_broker     6576    672 0x3fff36c0 2015-08-19 17:11:14 UTC+0000                               
+0x00000000aa10e180 MicrosoftEdgeC     4884    940 0x3fff3800 2015-08-19 17:11:17 UTC+0000   2015-08-19 17:17:57 UTC+0000
+0x00000000aa1ad600 WUDFHost.exe        468   1064 0x3fff3400 2015-08-19 17:18:09 UTC+0000                               
+0x00000000b0606a40 MicrosoftEdgeC     3260    940 0x3fff37e0 2015-08-19 17:15:23 UTC+0000                               
+0x00000000b0635a00 MicrosoftEdgeC     3752    940 0x3fff32c0 2015-08-19 17:17:58 UTC+0000                               
+0x00000000b066fb80 MicrosoftEdgeC     5240    940 0x3fff31e0 2015-08-19 17:15:05 UTC+0000   2015-08-19 17:16:49 UTC+0000
+0x00000000b07ce040 KakaoTalk.exe      1236   5832 0x3fff33e0 2015-08-19 17:17:07 UTC+0000   Correct!                               
+0x00000000b1c118c0 audiodg.exe        2580   1124 0x3fff3740 2015-08-19 16:58:03 UTC+0000                               
+0x00000000b1c64240 MicrosoftEdgeC     7964    940 0x3fff3460 2015-08-19 17:17:26 UTC+0000 
+
+PSLIST - Linkedlist, PSSCAN - Pool Tag
+
+DKOM (Direct Kernal Object Manipulation)
+
+
+Kakaotalk.exe PID - 1236
+
+
+3. Process Dump & String Search
+
+> C:\Users\digit\Desktop\volatility-2.5.standalone.exe -f C:\Users\digit\Desktop\memory2 --profile=Win10x86 memdump -p 1236 --dump-dir=C:\Users\digit\Desktop
+
+Volatility Foundation Volatility Framework 2.5
+************************************************************************
+Writing KakaoTalk.exe [  1236] to 1236.dmp
+
+1236.dmp
+
+@ - .com
+@ - .net
+
+hangouts ? -> ! Link Share
+
+rktskdkawns@gmail.com
+
+
+4. ~을 해야겠다는 결심
+
+-겠다
+-한다
+-할거다
+-겠어
+
+UTF-8 Encode & Search -> Found 2
+
+
+https://mothereff.in/utf-8
+
+
+[0,"그래 크리스마스때 해야겠다",[0,0,0,0]
+]
+]
+,[]
+]
+]
+,,,,,"83
+
+
+5. Final Flag
+
+Flag : hangouts_rktskdkawns_1225 
