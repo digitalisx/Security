@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML table demo</title>
+
+<script src="./sorttable.js"></script>
+<style>
+/*Using CSS for table*/
+.demotbl {
+    border: 0px solid #69899F;
+  }
+.demotbl th{
+    padding:15px;
+    color:#fff;
+    text-shadow:1px 1px 1px #568F23;
+    border-bottom:3px solid #9ED929;
+    background-color:#9DD929;
+    background:-webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.02, rgb(123,192,67)),
+        color-stop(0.51, rgb(139,198,66)),
+        color-stop(0.87, rgb(158,217,41))
+        );
+    background: -moz-linear-gradient(
+        center bottom,
+        rgb(123,192,67) 3%,
+        rgb(139,198,66) 52%,
+        rgb(158,217,41) 88%
+        );
+    -webkit-border-top-left-radius:5px;
+    -webkit-border-top-right-radius:5px;
+    -moz-border-radius:5px 5px 0px 0px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+  }
+.demotbl td{
+    width:100px;
+    padding:10px;
+    text-align:center;
+    vertical-align: top;
+    background-color:#DEF3CA;
+    border: 1px solid #BED3AB;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+    color:#666;
+    text-shadow:1px 1px 1px #fff;
+
+  }
+
+</style>
+</head>
+<body>
+<p>KITRI BoB Stand Alone Parser v1.0</p>
+<table class="demotbl sortable">
+  <tr>
+      <th>Number</th>
+      <th>File Name</th>
+      <th>Full Path</th>
+      <th>M Time</th>
+      <th>A Time</th>
+      <th>C Time</th>
+      <th>E Time</th>
+  </tr>
+
+            <tr>
+              <td>1</td>
+              <td><a href="/Users/digit/Desktop/Forensic/BoB_NTFS/test_directory/217cf03c06d38c40002ffcb4d9cc01f6.jpg">/217cf03c06d38c40002ffcb4d9cc01f6.jpg</a></td>
+              <td>/Users/digit/Desktop/Forensic/BoB_NTFS/test_directory/217cf03c06d38c40002ffcb4d9cc01f6.jpg</td>
+              <td>2017/01/12 02:30:44 (UTC/GMT +9:00)</td>
+              <td>2017/01/12 02:30:43 (UTC/GMT +9:00)</td>
+              <td>2017/01/12 02:30:44 (UTC/GMT +9:00)</td>
+              <td>2017/01/14 03:16:33 (UTC/GMT +9:00)</td>
+          </tr>
+          
+            <tr>
+              <td>2</td>
+              <td><a href="/Users/digit/Desktop/Forensic/BoB_NTFS/test_directory/240_F_115995657_RKhfaU.jpg">/240_F_115995657_RKhfaU.jpg</a></td>
+              <td>/Users/digit/Desktop/Forensic/BoB_NTFS/test_directory/240_F_115995657_RKhfaU.jpg</td>
+              <td>2017/01/12 02:46:07 (UTC/GMT +9:00)</td>
+              <td>2017/01/12 02:46:04 (UTC/GMT +9:00)</td>
+              <td>2017/01/12 02:46:06 (UTC/GMT +9:00)</td>
+              <td>2017/01/14 03:19:56 (UTC/GMT +9:00)</td>
+          </tr>
+          
+            <tr>
+              <td>3</td>
+              <td><a href="/Users/digit/Desktop/Forensic/BoB_NTFS/test_directory/867762-blurred-grass-nature.jpg">/867762-blurred-grass-nature.jpg</a></td>
+              <td>/Users/digit/Desktop/Forensic/BoB_NTFS/test_directory/867762-blurred-grass-nature.jpg</td>
+              <td>2017/01/12 02:29:06 (UTC/GMT +9:00)</td>
+              <td>2017/01/12 02:29:04 (UTC/GMT +9:00)</td>
+              <td>2017/01/12 02:29:05 (UTC/GMT +9:00)</td>
+              <td>2017/01/14 03:16:33 (UTC/GMT +9:00)</td>
+          </tr>
+          
+            <tr>
+              <td>4</td>
+              <td><a href="/Users/digit/Desktop/Forensic/BoB_NTFS/test_directory/98644-nature-blurred-macro.jpg">/98644-nature-blurred-macro.jpg</a></td>
+              <td>/Users/digit/Desktop/Forensic/BoB_NTFS/test_directory/98644-nature-blurred-macro.jpg</td>
+              <td>2017/01/12 02:29:35 (UTC/GMT +9:00)</td>
+              <td>2017/01/12 02:29:33 (UTC/GMT +9:00)</td>
+              <td>2017/01/12 02:29:34 (UTC/GMT +9:00)</td>
+              <td>2017/01/14 03:20:06 (UTC/GMT +9:00)</td>
+          </tr>
+          
+            <tr>
+              <td>5</td>
+              <td><a href="/Users/digit/Desktop/Forensic/BoB_NTFS/test_directory/ahn_201612.pdf">/ahn_201612.pdf</a></td>
+              <td>/Users/digit/Desktop/Forensic/BoB_NTFS/test_directory/ahn_201612.pdf</td>
+              <td>2017/01/02 22:25:27 (UTC/GMT +9:00)</td>
+              <td>2017/01/14 03:16:49 (UTC/GMT +9:00)</td>
+              <td>2017/01/14 03:16:49 (UTC/GMT +9:00)</td>
+              <td>2017/01/02 22:27:03 (UTC/GMT +9:00)</td>
+          </tr>
+          
+            <tr>
+              <td>6</td>
+              <td><a href="/Users/digit/Desktop/Forensic/BoB_NTFS/test_directory/ASEC_REPORT_vol.81.pdf">/ASEC_REPORT_vol.81.pdf</a></td>
+              <td>/Users/digit/Desktop/Forensic/BoB_NTFS/test_directory/ASEC_REPORT_vol.81.pdf</td>
+              <td>2017/01/02 22:25:20 (UTC/GMT +9:00)</td>
+              <td>2017/01/14 03:16:49 (UTC/GMT +9:00)</td>
+              <td>2017/01/14 03:16:49 (UTC/GMT +9:00)</td>
+              <td>2017/01/02 22:25:20 (UTC/GMT +9:00)</td>
+          </tr>
+          
+            <tr>
+              <td>7</td>
+              <td><a href="/Users/digit/Desktop/Forensic/BoB_NTFS/test_directory/ASEC_REPORT_vol.82.pdf">/ASEC_REPORT_vol.82.pdf</a></td>
+              <td>/Users/digit/Desktop/Forensic/BoB_NTFS/test_directory/ASEC_REPORT_vol.82.pdf</td>
+              <td>2017/01/02 22:25:24 (UTC/GMT +9:00)</td>
+              <td>2017/01/14 03:16:49 (UTC/GMT +9:00)</td>
+              <td>2017/01/14 03:16:49 (UTC/GMT +9:00)</td>
+              <td>2017/01/02 22:25:24 (UTC/GMT +9:00)</td>
+          </tr>
+          
+            <tr>
+              <td>8</td>
+              <td><a href="/Users/digit/Desktop/Forensic/BoB_NTFS/test_directory/black-shield-md.png">/black-shield-md.png</a></td>
+              <td>/Users/digit/Desktop/Forensic/BoB_NTFS/test_directory/black-shield-md.png</td>
+              <td>2017/01/12 01:07:19 (UTC/GMT +9:00)</td>
+              <td>2017/01/12 01:07:17 (UTC/GMT +9:00)</td>
+              <td>2017/01/12 01:07:18 (UTC/GMT +9:00)</td>
+              <td>2017/01/14 02:37:15 (UTC/GMT +9:00)</td>
+          </tr>
+          
+            <tr>
+              <td>9</td>
+              <td><a href="/Users/digit/Desktop/Forensic/BoB_NTFS/test_directory/images (1).jpg">/images (1).jpg</a></td>
+              <td>/Users/digit/Desktop/Forensic/BoB_NTFS/test_directory/images (1).jpg</td>
+              <td>2017/01/12 01:28:54 (UTC/GMT +9:00)</td>
+              <td>2017/01/12 01:28:53 (UTC/GMT +9:00)</td>
+              <td>2017/01/12 01:28:54 (UTC/GMT +9:00)</td>
+              <td>2017/01/14 02:37:15 (UTC/GMT +9:00)</td>
+          </tr>
+          
+            <tr>
+              <td>10</td>
+              <td><a href="/Users/digit/Desktop/Forensic/BoB_NTFS/test_directory/kisbic2.txt">/kisbic2.txt</a></td>
+              <td>/Users/digit/Desktop/Forensic/BoB_NTFS/test_directory/kisbic2.txt</td>
+              <td>2017/01/14 03:16:06 (UTC/GMT +9:00)</td>
+              <td>2017/01/12 00:00:16 (UTC/GMT +9:00)</td>
+              <td>2017/01/12 00:00:16 (UTC/GMT +9:00)</td>
+              <td>2017/01/14 03:16:06 (UTC/GMT +9:00)</td>
+          </tr>
+          
+            <tr>
+              <td>11</td>
+              <td><a href="/Users/digit/Desktop/Forensic/BoB_NTFS/test_directory/kisbics.txt">/kisbics.txt</a></td>
+              <td>/Users/digit/Desktop/Forensic/BoB_NTFS/test_directory/kisbics.txt</td>
+              <td>2017/01/14 03:15:49 (UTC/GMT +9:00)</td>
+              <td>2017/01/13 05:27:54 (UTC/GMT +9:00)</td>
+              <td>2017/01/13 05:27:54 (UTC/GMT +9:00)</td>
+              <td>2017/01/14 03:15:49 (UTC/GMT +9:00)</td>
+          </tr>
+          
+            <tr>
+              <td>12</td>
+              <td><a href="/Users/digit/Desktop/Forensic/BoB_NTFS/test_directory/pexels-photo-225768.jpeg">/pexels-photo-225768.jpeg</a></td>
+              <td>/Users/digit/Desktop/Forensic/BoB_NTFS/test_directory/pexels-photo-225768.jpeg</td>
+              <td>2017/01/12 01:28:51 (UTC/GMT +9:00)</td>
+              <td>2017/01/12 01:28:49 (UTC/GMT +9:00)</td>
+              <td>2017/01/12 01:28:51 (UTC/GMT +9:00)</td>
+              <td>2017/01/14 02:37:15 (UTC/GMT +9:00)</td>
+          </tr>
+          
+            <tr>
+              <td>13</td>
+              <td><a href="/Users/digit/Desktop/Forensic/BoB_NTFS/test_directory/Shield.png">/Shield.png</a></td>
+              <td>/Users/digit/Desktop/Forensic/BoB_NTFS/test_directory/Shield.png</td>
+              <td>2017/01/12 01:07:24 (UTC/GMT +9:00)</td>
+              <td>2017/01/12 01:07:22 (UTC/GMT +9:00)</td>
+              <td>2017/01/12 01:07:23 (UTC/GMT +9:00)</td>
+              <td>2017/01/14 02:37:15 (UTC/GMT +9:00)</td>
+          </tr>
+          
+</table>
+</body>
+</html>
