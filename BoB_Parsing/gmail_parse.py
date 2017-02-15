@@ -48,7 +48,7 @@ def main():
 
 	# Login Gmail
 	print "[-] Log-on Gmail Account..."
-	g = gmail.login('digitalisx99@gmail.com', 'dnflsk135')
+	g = gmail.login('-', '-')
 
 	target = 'fl0ckfl0ck@hotmail.com'
 
