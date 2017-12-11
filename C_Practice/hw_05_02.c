@@ -11,21 +11,27 @@ int main(void)
 
 	scanf("%s", str);
 	int len = strlen(str);
-	int spe_num = len / 4;
+	int spe_num = (len / 4);
 
 	for(int i = 0; i < len; i++)
 	{
 		int val = str[i] - 48;	
 		printf("%s", han[val]);
-		
-		if (((len - i - 1) % 4) == 0)
+
+		if (((len - i - 1) % 4) == 0) // 12345 5 - 0 - 1  12345678 8 - 3 - 1
 		{
-			printf("%s", largeunit[spe_num]);
-			spe_num--;
-		}
-		
+			if((len % 4) != 0)
+			{
+				printf("%s ", largeunit[spe_num]);
+				spe_num -= 1;
+			}
+			else
+			{
+				printf("%s ", largeunit[spe_num-1]);
+				spe_num -= 1;
+			}
+		}	
 		printf("%s", smallunit[(len - i - 1) % 4]);
 	}
 	printf("\n");
-	system("pause");
 }
