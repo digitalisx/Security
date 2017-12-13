@@ -32,7 +32,7 @@ int main(void)
 	Rectangle pos;
 	
 	printf("Input First Position : ");
-	scanf("%d %d", &(pos.rec_x).xpos, &(pos.rec_x).ypos);
+	scanf("%d %d", &pos.rec_x.xpos, &(pos.rec_x).ypos);
 
 	printf("Input Second Position : ");
 	scanf("%d %d", &(pos.rec_y).xpos, &(pos.rec_y).ypos);
