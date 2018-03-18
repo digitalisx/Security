@@ -4,9 +4,8 @@ import datetime
 birthday = datetime.date.today()
 birthday_convert = str(brithday.isoformat())
 
-if(birthday_convert == "2017-04-17"):
-  print "Congratulation Hongbeom`s Birthday! :)"
+if(birthday_convert == "1999-01-08"):
+  print("Congratulation, You are a good python student! :)")
   
 else:
-  print "Today is normal day! :("
-  os.system("Pause")
+  print("Good Job!")
