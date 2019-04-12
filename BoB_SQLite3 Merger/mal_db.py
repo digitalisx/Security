@@ -15,27 +15,19 @@ class sqlite:
 		md5_read = md5_file.read()
 		md5_value = hashlib.md5(md5_read).hexdigest()
 
-		SQL_PARAGRAPH_HEADER = "INSERT INTO malware VALUES ('"
-		SQL_PARAGRAPH_MIDDLE = name + "', '"
-		SQL_PARAGRAPH_JUSTIFY = str(md5_value)
-		SQL_PARAGRAPH_TAIL = "')"
+		SQL_PARAGRAPH = "INSERT INTO malware (Name, MD5) values (?, ?)"
+		self.cur.execute(SQL_PARAGRAPH, (name, md5_value))
 
-		SQL_PARAGRAPH_FULL = ""
-		SQL_PARAGRAPH_FULL += SQL_PARAGRAPH_HEADER
-		SQL_PARAGRAPH_FULL += SQL_PARAGRAPH_MIDDLE
-		SQL_PARAGRAPH_FULL += SQL_PARAGRAPH_JUSTIFY
-		SQL_PARAGARPH_FULL += SQL_PARAGRAPH_TAIL
-
-		return SQL_PARAGRAPH_FULL
+		return 0
 
 	def generate_table(self):
 		
-		self.cur.execute("CREATE TABLE malware (Name text, MD5 text)")
+		self.cur.execute("CREATE TABLE IF NOT EXISTS malware (Name text, MD5 text)")
 
 		os.chdir("samples")
 
 		for file_name in os.listdir():
-			self.cur.execute(self.generate_cell(file_name))
+			self.generate_cell(file_name)
 
 		self.conn.commit()
 		self.conn.close()
