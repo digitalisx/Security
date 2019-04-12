@@ -8,14 +8,7 @@
 
 int sqlite_callback(void *pArg, int argc, char **argv, char **columnNames)
 {
-	if(argv[1])
-	{
-		return _SIGFIND;
-	}
-	else
-	{
-		return _SIGNFIND;
-	}
+	return argv[1];
 }
 
 char* calculate_md5(const char * file_name)
@@ -61,25 +54,18 @@ int sqlite_diff(const char * md5_value)
 
 	if(sqlite3_exec(conn, sql_query_header, sqlite_callback, 0, &zErrMsg))
 	{
-		return _SIGFIND;
+		printf("[!] Ransomware Signature Found!\n");
+		return 1;
 	}
 	else
 	{
-		return _SIGNFIND;
+		printf("[!] Ransomware Signature Not Found!\n");
+		return 0;
 	}
 }
 
 int main(void)
 {
-	int result = sqlite_diff(calculate_md5("stack"));
-	if(result == _SIGFIND)
-	{
-		printf("[!] Ransomware Signature Found!\n");
-	}
-	else
-	{
-		printf("[!] Ransomware Signature Not Found!\n");
-	}
-
+	sqlite_diff(calculate_md5("stack"));
 	return 0;
 }
